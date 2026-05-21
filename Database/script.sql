@@ -58,7 +58,7 @@ CREATE INDEX idx_users_email ON users(email);
 GO
 
 --Insert usuario de prueba
-INSERT INTO  dbo.users (firstname, lastname, email, password, phone)
+INSERT INTO  dbo.users (firstname, lastname, email, password, address, phone)
 VALUES (N'Yeisson', N'Rodriguez', N'yeissonr@prueba.com', N'PASSWORD', N'calle falsa 123', N'+573000000000');
 GO
 
