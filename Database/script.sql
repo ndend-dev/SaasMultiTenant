@@ -3,8 +3,6 @@
 Author:       Yeisson Duvan Rodriguez Herrera
 Create Date:  2026-05-20
 Description:  Script Saas MUlti Tenant.
-              
-Modified By:  [Nombre] - [Fecha] - [Motivo del cambio]
 -------------------------------------------------------------------------------
 */
 
@@ -53,6 +51,12 @@ CREATE TABLE dbo.users
 );
 GO
 
+CREATE INDEX idx_users_email ON users(email);
+GO
+
+INSERT INTO  dbo.users (firstname, lastname, email, password, phone)
+VALUES (N'Yeisson', N'Rodriguez', N'yeissonr@prueba.com', N'PASSWORD', N'calle falsa 123', N'+573000000000');
+GO
 
 CREATE TABLE dbo.workspaces
 (
@@ -62,6 +66,14 @@ CREATE TABLE dbo.workspaces
 	createdAt DATETIME NOT NULL DEFAULT GETDATE(),
 	updateAt DATETIME NULL
 );
+GO
+
+INSERT INTO dbo.workspaces (name, description)
+VALUES (N'Workspace Alfa', N'Workspace Alfa');
+
+INSERT INTO dbo.workspaces (name, description)
+VALUES (N'Workspace Beta', N'Workspace Beta');
+GO
 
 CREATE TABLE dbo.userWorkspaces(
 	userId INT NOT NULL FOREIGN KEY REFERENCES users(id) ON DELETE CASCADE, 
@@ -71,7 +83,14 @@ CREATE TABLE dbo.userWorkspaces(
 
 	PRIMARY KEY CLUSTERED (userId, workspaceId)
 );
+GO
 
+INSERT INTO dbo.userWorkspaces (userId, workspaceId , roleId)
+VALUES ((SELECT id FROM dbo.users WHERE email = 'yeissonr@prueba.com'), (SELECT id FROM dbo.workspaces WHERE name = 'Workspace Alfa'), (SELECT id FROM dbo.roles WHERE name = 'Admin'));
+
+INSERT INTO dbo.userWorkspaces (userId, workspaceId , roleId)
+VALUES ((SELECT id FROM dbo.users WHERE email = 'yeissonr@prueba.com'), (SELECT id FROM dbo.workspaces WHERE name = 'Workspace Beta'), (SELECT id FROM dbo.roles WHERE name = 'Lector'));
+GO
 
 CREATE TABLE dbo.projects
 (
@@ -84,3 +103,18 @@ CREATE TABLE dbo.projects
 	createdAt DATETIME NOT NULL DEFAULT GETDATE(), 
 	updatedAt DATETIME NULL
 );
+GO
+
+INSERT INTO dbo.projects(workspaceId, createdById, name, description, status)
+VALUES ((SELECT id FROM dbo.workspaces where name = 'Workspace Alfa'), (SELECT id FROM dbo.users WHERE email = 'yeissonr@prueba.com'), N'Rediseño sitio web', N'Renovación completa de la interfaz y experiencia de usuario' , 'Activo');
+
+INSERT INTO dbo.projects(workspaceId, createdById, name, description, status)
+VALUES ((SELECT id FROM dbo.workspaces where name = 'Workspace Alfa'), (SELECT id FROM dbo.users WHERE email = 'yeissonr@prueba.com'), N'Migración de base de datos', N'Migrar la base de datos local a la nubbe' , 'Activo');
+
+INSERT INTO dbo.projects(workspaceId, createdById, name, description, status)
+VALUES ((SELECT id FROM dbo.workspaces where name = 'Workspace Beta'), (SELECT id FROM dbo.users WHERE email = 'yeissonr@prueba.com'), N'Campaña de marketing', N'Realizar campañas de marketing en redes sociales' , 'Activo');
+
+INSERT INTO dbo.projects(workspaceId, createdById, name, description, status)
+VALUES ((SELECT id FROM dbo.workspaces where name = 'Workspace Beta'), (SELECT id FROM dbo.users WHERE email = 'yeissonr@prueba.com'), N'App Movil', N'Desarrollar nuevas funcionalidades para las plataformas moviles' , 'Activo');
+GO
+
