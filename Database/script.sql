@@ -6,7 +6,7 @@ Description:  Script Saas MUlti Tenant.
 -------------------------------------------------------------------------------
 */
 
-
+--Creación base de datos
 IF NOT EXISTS (SELECT * FROM sys.databases WHERE name = 'SaasMultiTenant')
 BEGIN
     CREATE DATABASE SaasMultiTenant;
@@ -16,7 +16,7 @@ GO
 USE SaasMultiTenant;
 GO
 
-
+--Creacion tabla roles
 CREATE TABLE dbo.roles
 (
 	id INT IDENTITY(1,1) PRIMARY KEY, 
@@ -27,6 +27,7 @@ CREATE TABLE dbo.roles
 );
 GO
 
+--Inserts tabla roles
 INSERT INTO dbo.roles (name, description)
 VALUES (N'Admin', N'Puede crear, editar, eliminar proyectos');
 
@@ -37,6 +38,7 @@ INSERT INTO dbo.roles (name, description)
 VALUES (N'Lector', N'Solo puede ver los proyectos');
 GO
 
+--Creación tabla users
 CREATE TABLE dbo.users
 (
 	id INT IDENTITY(1,1) PRIMARY KEY,
@@ -51,13 +53,16 @@ CREATE TABLE dbo.users
 );
 GO
 
+--Index email tabla users
 CREATE INDEX idx_users_email ON users(email);
 GO
 
+--Insert usuario de prueba
 INSERT INTO  dbo.users (firstname, lastname, email, password, phone)
 VALUES (N'Yeisson', N'Rodriguez', N'yeissonr@prueba.com', N'PASSWORD', N'calle falsa 123', N'+573000000000');
 GO
 
+--Creación tabla workspaces
 CREATE TABLE dbo.workspaces
 (
 	id INT IDENTITY(1,1) PRIMARY KEY,
@@ -68,6 +73,7 @@ CREATE TABLE dbo.workspaces
 );
 GO
 
+--Inserts workspace 
 INSERT INTO dbo.workspaces (name, description)
 VALUES (N'Workspace Alfa', N'Workspace Alfa');
 
@@ -75,6 +81,7 @@ INSERT INTO dbo.workspaces (name, description)
 VALUES (N'Workspace Beta', N'Workspace Beta');
 GO
 
+--Creación tabla userWorkspaces (usuarios por workpsce)
 CREATE TABLE dbo.userWorkspaces(
 	userId INT NOT NULL FOREIGN KEY REFERENCES users(id) ON DELETE CASCADE, 
 	workspaceId INT NOT NULL FOREIGN KEY REFERENCES workspaces(id) ON DELETE CASCADE, 
@@ -85,6 +92,7 @@ CREATE TABLE dbo.userWorkspaces(
 );
 GO
 
+--Inserts workspace
 INSERT INTO dbo.userWorkspaces (userId, workspaceId , roleId)
 VALUES ((SELECT id FROM dbo.users WHERE email = 'yeissonr@prueba.com'), (SELECT id FROM dbo.workspaces WHERE name = 'Workspace Alfa'), (SELECT id FROM dbo.roles WHERE name = 'Admin'));
 
@@ -92,6 +100,7 @@ INSERT INTO dbo.userWorkspaces (userId, workspaceId , roleId)
 VALUES ((SELECT id FROM dbo.users WHERE email = 'yeissonr@prueba.com'), (SELECT id FROM dbo.workspaces WHERE name = 'Workspace Beta'), (SELECT id FROM dbo.roles WHERE name = 'Lector'));
 GO
 
+--Creación tabla projects
 CREATE TABLE dbo.projects
 (
 	id INT IDENTITY(1,1) PRIMARY KEY, 
@@ -105,6 +114,7 @@ CREATE TABLE dbo.projects
 );
 GO
 
+--Inserts projectos de prueba 
 INSERT INTO dbo.projects(workspaceId, createdById, name, description, status)
 VALUES ((SELECT id FROM dbo.workspaces where name = 'Workspace Alfa'), (SELECT id FROM dbo.users WHERE email = 'yeissonr@prueba.com'), N'Rediseño sitio web', N'Renovación completa de la interfaz y experiencia de usuario' , 'Activo');
 
