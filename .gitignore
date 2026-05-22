@@ -1,0 +1,40 @@
+# ==========================================
+# CONFIGURACIONES DE .NET (C#)
+# ==========================================
+# Carpetas de compilación
+**/bin/
+**/obj/
+
+# Archivos de configuración local con credenciales (Base de datos, JWT)
+**/appsettings.Development.json
+**/appsettings.Local.json
+# **/appsettings.json # (Descomenta esta línea si tampoco quieres subir el principal)
+
+# Archivos de usuario de Visual Studio
+**/.vs/
+**/*.user
+**/*.suo
+
+# ==========================================
+# CONFIGURACIONES DE FRONTEND (Node / JavaScript / TS)
+# ==========================================
+# Dependencias de Node
+**/node_modules/
+**/.pnpm-store/
+
+# Carpetas de producción / compilación de Frontend
+**/dist/
+**/build/
+**/.next/
+
+# Variables de entorno locales del Frontend
+**/.env
+**/.env.local
+**/.env.*.local
+
+# ==========================================
+# SISTEMA OPERATIVO Y LOGS
+# ==========================================
+*.log
+**/Thumbs.db
+**/.DS_Store
