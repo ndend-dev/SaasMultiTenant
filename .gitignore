@@ -5,11 +5,6 @@
 **/bin/
 **/obj/
 
-# Archivos de configuración local con credenciales (Base de datos, JWT)
-**/appsettings.Development.json
-**/appsettings.Local.json
-# **/appsettings.json # (Descomenta esta línea si tampoco quieres subir el principal)
-
 # Archivos de usuario de Visual Studio
 **/.vs/
 **/*.user
@@ -38,4 +33,3 @@
 *.log
 **/Thumbs.db
 **/.DS_Store
-/Backend/SaasMultiTenant/appsettings.json
