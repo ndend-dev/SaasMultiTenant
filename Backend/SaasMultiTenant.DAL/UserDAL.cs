@@ -20,7 +20,23 @@ namespace SaasMultiTenant.DAL
         {
             try
             {
-                return await _context.Users.FirstOrDefaultAsync(u => u.Email == email); 
+                return await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception("Error al consultar la información de usuarios.");
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public async Task<User?> GetUserById(int id)
+        {
+            try
+            {
+                return await _context.Users.FirstOrDefaultAsync(u => u.Id == id);
             }
             catch (SqlException ex)
             {

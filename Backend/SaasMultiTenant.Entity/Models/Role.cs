@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace SaasMultiTenant.Entity.Models;
+﻿namespace SaasMultiTenant.Entity.Models;
 
 public partial class Role
 {

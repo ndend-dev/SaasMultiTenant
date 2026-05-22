@@ -2,7 +2,6 @@
 using SaasMultiTenant.BL.Interfaces;
 using SaasMultiTenant.Entity.Request;
 using SaasMultiTenant.Entity.Response;
-using SaasMultiTenant.Utils;
 
 namespace SaasMultiTenant.Controllers
 {
@@ -27,9 +26,28 @@ namespace SaasMultiTenant.Controllers
             }
             catch (ArgumentException ex)
             {
-                return BadRequest(new { Message = ex.Message });
+                return BadRequest(new { ex.Message });
             }
-            catch(Exception ex)
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
+        }
+
+        [HttpPost("token")]
+        public async Task<IActionResult> Token([FromBody] TokenRequest tokenRequest)
+        {
+            try
+            {
+                TokenResponse response = await _authBL.GenerateToken(tokenRequest);
+
+                return Ok(response);
+            }
+            catch (ArgumentException ex)
+            {
+                return BadRequest(new { ex.Message });
+            }
+            catch (Exception ex)
             {
                 return StatusCode(500, ex.Message);
             }

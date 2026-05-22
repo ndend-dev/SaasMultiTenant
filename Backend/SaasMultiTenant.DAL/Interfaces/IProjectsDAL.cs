@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SaasMultiTenant.Entity.Models;
 
 namespace SaasMultiTenant.DAL.Interfaces
 {
     public interface IProjectsDAL
     {
+        Task<List<Project>> GetProjectsByWorkspaceId(int workspaceId);
+        Task<Project?> CreateProject(Project project);
     }
 }

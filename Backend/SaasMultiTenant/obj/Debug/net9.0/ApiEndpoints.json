@@ -16,13 +16,51 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "SaasMultiTenant.Controllers.ProjectController",
-    "Method": "Index",
-    "RelativePath": "api/Project",
+    "ContainingType": "SaasMultiTenant.Controllers.AuthController",
+    "Method": "Token",
+    "RelativePath": "api/Auth/token",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tokenRequest",
+        "Type": "SaasMultiTenant.Entity.Request.TokenRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SaasMultiTenant.Controllers.ProjectsController",
+    "Method": "Create",
+    "RelativePath": "api/Projects",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "projectsRequest",
+        "Type": "SaasMultiTenant.Entity.Request.ProjectCreateRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "SaasMultiTenant.Controllers.ProjectsController",
+    "Method": "Get",
+    "RelativePath": "api/Projects/{workspaceId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "workspaceId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   }
 ]

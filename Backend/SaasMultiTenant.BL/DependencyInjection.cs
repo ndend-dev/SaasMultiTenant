@@ -11,6 +11,8 @@ namespace SaasMultiTenant.BL
             services.AddDataAccessLayer(connectionString);
 
             services.AddScoped<IAuthBL, AuthBL>();
+            services.AddScoped<IProjectsBL, ProjectsBL>();
+            services.AddScoped<ITokenService, TokenService>();
 
             return services;
         }
