@@ -1,0 +1,12 @@
+D:\Proyectos\Entrevistas\Software-Colombia\SaaS Multi-Tenant\Backend\SaasMultiTenant.Entity\bin\Debug\net9.0\SaasMultiTenant.Entity.deps.json
+D:\Proyectos\Entrevistas\Software-Colombia\SaaS Multi-Tenant\Backend\SaasMultiTenant.Entity\bin\Debug\net9.0\SaasMultiTenant.Entity.dll
+D:\Proyectos\Entrevistas\Software-Colombia\SaaS Multi-Tenant\Backend\SaasMultiTenant.Entity\bin\Debug\net9.0\SaasMultiTenant.Entity.pdb
+D:\Proyectos\Entrevistas\Software-Colombia\SaaS Multi-Tenant\Backend\SaasMultiTenant.Entity\obj\Debug\net9.0\SaasMultiTenant.Entity.GeneratedMSBuildEditorConfig.editorconfig
+D:\Proyectos\Entrevistas\Software-Colombia\SaaS Multi-Tenant\Backend\SaasMultiTenant.Entity\obj\Debug\net9.0\SaasMultiTenant.Entity.AssemblyInfoInputs.cache
+D:\Proyectos\Entrevistas\Software-Colombia\SaaS Multi-Tenant\Backend\SaasMultiTenant.Entity\obj\Debug\net9.0\SaasMultiTenant.Entity.AssemblyInfo.cs
+D:\Proyectos\Entrevistas\Software-Colombia\SaaS Multi-Tenant\Backend\SaasMultiTenant.Entity\obj\Debug\net9.0\SaasMultiTenant.Entity.csproj.CoreCompileInputs.cache
+D:\Proyectos\Entrevistas\Software-Colombia\SaaS Multi-Tenant\Backend\SaasMultiTenant.Entity\obj\Debug\net9.0\SaasMultiTenant.Entity.sourcelink.json
+D:\Proyectos\Entrevistas\Software-Colombia\SaaS Multi-Tenant\Backend\SaasMultiTenant.Entity\obj\Debug\net9.0\SaasMultiTenant.Entity.dll
+D:\Proyectos\Entrevistas\Software-Colombia\SaaS Multi-Tenant\Backend\SaasMultiTenant.Entity\obj\Debug\net9.0\refint\SaasMultiTenant.Entity.dll
+D:\Proyectos\Entrevistas\Software-Colombia\SaaS Multi-Tenant\Backend\SaasMultiTenant.Entity\obj\Debug\net9.0\SaasMultiTenant.Entity.pdb
+D:\Proyectos\Entrevistas\Software-Colombia\SaaS Multi-Tenant\Backend\SaasMultiTenant.Entity\obj\Debug\net9.0\ref\SaasMultiTenant.Entity.dll

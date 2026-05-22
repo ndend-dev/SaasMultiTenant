@@ -1,0 +1,202 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Proyectos\\Entrevistas\\Software-Colombia\\SaaS Multi-Tenant\\Backend\\SaasMultiTenant\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A4F8E227-57B3-4EFA-8EB4-B1C47531E70F}|SaasMultiTenant.csproj|d:\\proyectos\\entrevistas\\software-colombia\\saas multi-tenant\\backend\\saasmultitenant\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4F8E227-57B3-4EFA-8EB4-B1C47531E70F}|SaasMultiTenant.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A4F8E227-57B3-4EFA-8EB4-B1C47531E70F}|SaasMultiTenant.csproj|d:\\proyectos\\entrevistas\\software-colombia\\saas multi-tenant\\backend\\saasmultitenant\\controllers\\projectscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A4F8E227-57B3-4EFA-8EB4-B1C47531E70F}|SaasMultiTenant.csproj|solutionrelative:controllers\\projectscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40E41416-6343-44AE-92EC-B783A7B4B031}|..\\SaasMultiTenant.BL\\SaasMultiTenant.BL.csproj|d:\\proyectos\\entrevistas\\software-colombia\\saas multi-tenant\\backend\\saasmultitenant.bl\\interfaces\\iprojectsbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40E41416-6343-44AE-92EC-B783A7B4B031}|..\\SaasMultiTenant.BL\\SaasMultiTenant.BL.csproj|d:\\proyectos\\entrevistas\\software-colombia\\saas multi-tenant\\backend\\saasmultitenant.bl\\projectsbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{246CB18A-F803-419E-B96F-A7480FB2FF19}|..\\SaasMultiTenant.Entity\\SaasMultiTenant.Entity.csproj|d:\\proyectos\\entrevistas\\software-colombia\\saas multi-tenant\\backend\\saasmultitenant.entity\\response\\projectcreateresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84CC389D-B1AF-4938-9E4C-648E714AB19B}|..\\SaasMultiTenant.Utils\\SaasMultiTenant.Utils.csproj|d:\\proyectos\\entrevistas\\software-colombia\\saas multi-tenant\\backend\\saasmultitenant.utils\\constants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{246CB18A-F803-419E-B96F-A7480FB2FF19}|..\\SaasMultiTenant.Entity\\SaasMultiTenant.Entity.csproj|d:\\proyectos\\entrevistas\\software-colombia\\saas multi-tenant\\backend\\saasmultitenant.entity\\request\\projectcreaterequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{246CB18A-F803-419E-B96F-A7480FB2FF19}|..\\SaasMultiTenant.Entity\\SaasMultiTenant.Entity.csproj|d:\\proyectos\\entrevistas\\software-colombia\\saas multi-tenant\\backend\\saasmultitenant.entity\\response\\projectsresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9EA75F9-B4F5-457E-BA87-B3CEA4D71287}|..\\SaasMultiTenant.DAL\\SaasMultiTenant.DAL.csproj|d:\\proyectos\\entrevistas\\software-colombia\\saas multi-tenant\\backend\\saasmultitenant.dal\\projectdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9EA75F9-B4F5-457E-BA87-B3CEA4D71287}|..\\SaasMultiTenant.DAL\\SaasMultiTenant.DAL.csproj|d:\\proyectos\\entrevistas\\software-colombia\\saas multi-tenant\\backend\\saasmultitenant.dal\\interfaces\\iprojectsdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9EA75F9-B4F5-457E-BA87-B3CEA4D71287}|..\\SaasMultiTenant.DAL\\SaasMultiTenant.DAL.csproj|d:\\proyectos\\entrevistas\\software-colombia\\saas multi-tenant\\backend\\saasmultitenant.dal\\workspacedal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Proyectos\\Entrevistas\\Software-Colombia\\SaaS Multi-Tenant\\Backend\\SaasMultiTenant\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Proyectos\\Entrevistas\\Software-Colombia\\SaaS Multi-Tenant\\Backend\\SaasMultiTenant\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAGoAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-22T22:41:46.626Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Constants.cs",
+              "DocumentMoniker": "D:\\Proyectos\\Entrevistas\\Software-Colombia\\SaaS Multi-Tenant\\Backend\\SaasMultiTenant.Utils\\Constants.cs",
+              "RelativeDocumentMoniker": "..\\SaasMultiTenant.Utils\\Constants.cs",
+              "ToolTip": "D:\\Proyectos\\Entrevistas\\Software-Colombia\\SaaS Multi-Tenant\\Backend\\SaasMultiTenant.Utils\\Constants.cs",
+              "RelativeToolTip": "..\\SaasMultiTenant.Utils\\Constants.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-22T22:23:35.484Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProjectCreateResponse.cs",
+              "DocumentMoniker": "D:\\Proyectos\\Entrevistas\\Software-Colombia\\SaaS Multi-Tenant\\Backend\\SaasMultiTenant.Entity\\Response\\ProjectCreateResponse.cs",
+              "RelativeDocumentMoniker": "..\\SaasMultiTenant.Entity\\Response\\ProjectCreateResponse.cs",
+              "ToolTip": "D:\\Proyectos\\Entrevistas\\Software-Colombia\\SaaS Multi-Tenant\\Backend\\SaasMultiTenant.Entity\\Response\\ProjectCreateResponse.cs",
+              "RelativeToolTip": "..\\SaasMultiTenant.Entity\\Response\\ProjectCreateResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAUAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-22T22:13:32.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IProjectsDAL.cs",
+              "DocumentMoniker": "D:\\Proyectos\\Entrevistas\\Software-Colombia\\SaaS Multi-Tenant\\Backend\\SaasMultiTenant.DAL\\Interfaces\\IProjectsDAL.cs",
+              "RelativeDocumentMoniker": "..\\SaasMultiTenant.DAL\\Interfaces\\IProjectsDAL.cs",
+              "ToolTip": "D:\\Proyectos\\Entrevistas\\Software-Colombia\\SaaS Multi-Tenant\\Backend\\SaasMultiTenant.DAL\\Interfaces\\IProjectsDAL.cs",
+              "RelativeToolTip": "..\\SaasMultiTenant.DAL\\Interfaces\\IProjectsDAL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-22T21:11:30.693Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ProjectDAL.cs",
+              "DocumentMoniker": "D:\\Proyectos\\Entrevistas\\Software-Colombia\\SaaS Multi-Tenant\\Backend\\SaasMultiTenant.DAL\\ProjectDAL.cs",
+              "RelativeDocumentMoniker": "..\\SaasMultiTenant.DAL\\ProjectDAL.cs",
+              "ToolTip": "D:\\Proyectos\\Entrevistas\\Software-Colombia\\SaaS Multi-Tenant\\Backend\\SaasMultiTenant.DAL\\ProjectDAL.cs",
+              "RelativeToolTip": "..\\SaasMultiTenant.DAL\\ProjectDAL.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowCIAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-22T21:06:31.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "WorkspaceDAL.cs",
+              "DocumentMoniker": "D:\\Proyectos\\Entrevistas\\Software-Colombia\\SaaS Multi-Tenant\\Backend\\SaasMultiTenant.DAL\\WorkspaceDAL.cs",
+              "RelativeDocumentMoniker": "..\\SaasMultiTenant.DAL\\WorkspaceDAL.cs",
+              "ToolTip": "D:\\Proyectos\\Entrevistas\\Software-Colombia\\SaaS Multi-Tenant\\Backend\\SaasMultiTenant.DAL\\WorkspaceDAL.cs",
+              "RelativeToolTip": "..\\SaasMultiTenant.DAL\\WorkspaceDAL.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwB4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-22T21:01:53.578Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProjectsResponse.cs",
+              "DocumentMoniker": "D:\\Proyectos\\Entrevistas\\Software-Colombia\\SaaS Multi-Tenant\\Backend\\SaasMultiTenant.Entity\\Response\\ProjectsResponse.cs",
+              "RelativeDocumentMoniker": "..\\SaasMultiTenant.Entity\\Response\\ProjectsResponse.cs",
+              "ToolTip": "D:\\Proyectos\\Entrevistas\\Software-Colombia\\SaaS Multi-Tenant\\Backend\\SaasMultiTenant.Entity\\Response\\ProjectsResponse.cs",
+              "RelativeToolTip": "..\\SaasMultiTenant.Entity\\Response\\ProjectsResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-22T20:56:34.904Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProjectCreateRequest.cs",
+              "DocumentMoniker": "D:\\Proyectos\\Entrevistas\\Software-Colombia\\SaaS Multi-Tenant\\Backend\\SaasMultiTenant.Entity\\Request\\ProjectCreateRequest.cs",
+              "RelativeDocumentMoniker": "..\\SaasMultiTenant.Entity\\Request\\ProjectCreateRequest.cs",
+              "ToolTip": "D:\\Proyectos\\Entrevistas\\Software-Colombia\\SaaS Multi-Tenant\\Backend\\SaasMultiTenant.Entity\\Request\\ProjectCreateRequest.cs",
+              "RelativeToolTip": "..\\SaasMultiTenant.Entity\\Request\\ProjectCreateRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-22T20:17:31.642Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IProjectsBL.cs",
+              "DocumentMoniker": "D:\\Proyectos\\Entrevistas\\Software-Colombia\\SaaS Multi-Tenant\\Backend\\SaasMultiTenant.BL\\Interfaces\\IProjectsBL.cs",
+              "RelativeDocumentMoniker": "..\\SaasMultiTenant.BL\\Interfaces\\IProjectsBL.cs",
+              "ToolTip": "D:\\Proyectos\\Entrevistas\\Software-Colombia\\SaaS Multi-Tenant\\Backend\\SaasMultiTenant.BL\\Interfaces\\IProjectsBL.cs",
+              "RelativeToolTip": "..\\SaasMultiTenant.BL\\Interfaces\\IProjectsBL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-22T20:51:55.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProjectsBL.cs",
+              "DocumentMoniker": "D:\\Proyectos\\Entrevistas\\Software-Colombia\\SaaS Multi-Tenant\\Backend\\SaasMultiTenant.BL\\ProjectsBL.cs",
+              "RelativeDocumentMoniker": "..\\SaasMultiTenant.BL\\ProjectsBL.cs",
+              "ToolTip": "D:\\Proyectos\\Entrevistas\\Software-Colombia\\SaaS Multi-Tenant\\Backend\\SaasMultiTenant.BL\\ProjectsBL.cs",
+              "RelativeToolTip": "..\\SaasMultiTenant.BL\\ProjectsBL.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAowDoAAABuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-22T20:51:44.494Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProjectsController.cs",
+              "DocumentMoniker": "D:\\Proyectos\\Entrevistas\\Software-Colombia\\SaaS Multi-Tenant\\Backend\\SaasMultiTenant\\Controllers\\ProjectsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProjectsController.cs",
+              "ToolTip": "D:\\Proyectos\\Entrevistas\\Software-Colombia\\SaaS Multi-Tenant\\Backend\\SaasMultiTenant\\Controllers\\ProjectsController.cs",
+              "RelativeToolTip": "Controllers\\ProjectsController.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAowDwAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-22T18:55:30.873Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
