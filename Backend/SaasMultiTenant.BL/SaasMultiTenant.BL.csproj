@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SaasMultiTenant.DAL\SaasMultiTenant.DAL.csproj" />
+    <ProjectReference Include="..\SaasMultiTenant.Entity\SaasMultiTenant.Entity.csproj" />
+    <ProjectReference Include="..\SaasMultiTenant.Utils\SaasMultiTenant.Utils.csproj" />
+  </ItemGroup>
+
+</Project>

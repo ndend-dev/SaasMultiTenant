@@ -1,0 +1,16 @@
+D:\Proyectos\Entrevistas\Software-Colombia\SaaS Multi-Tenant\Backend\SaasMultiTenant.Utils\bin\Debug\net9.0\SaasMultiTenant.Utils.deps.json
+D:\Proyectos\Entrevistas\Software-Colombia\SaaS Multi-Tenant\Backend\SaasMultiTenant.Utils\bin\Debug\net9.0\SaasMultiTenant.Utils.dll
+D:\Proyectos\Entrevistas\Software-Colombia\SaaS Multi-Tenant\Backend\SaasMultiTenant.Utils\bin\Debug\net9.0\SaasMultiTenant.Utils.pdb
+D:\Proyectos\Entrevistas\Software-Colombia\SaaS Multi-Tenant\Backend\SaasMultiTenant.Utils\obj\Debug\net9.0\SaasMultiTenant.Utils.GeneratedMSBuildEditorConfig.editorconfig
+D:\Proyectos\Entrevistas\Software-Colombia\SaaS Multi-Tenant\Backend\SaasMultiTenant.Utils\obj\Debug\net9.0\SaasMultiTenant.Utils.AssemblyInfoInputs.cache
+D:\Proyectos\Entrevistas\Software-Colombia\SaaS Multi-Tenant\Backend\SaasMultiTenant.Utils\obj\Debug\net9.0\SaasMultiTenant.Utils.AssemblyInfo.cs
+D:\Proyectos\Entrevistas\Software-Colombia\SaaS Multi-Tenant\Backend\SaasMultiTenant.Utils\obj\Debug\net9.0\SaasMultiTenant.Utils.csproj.CoreCompileInputs.cache
+D:\Proyectos\Entrevistas\Software-Colombia\SaaS Multi-Tenant\Backend\SaasMultiTenant.Utils\obj\Debug\net9.0\SaasMultiTenant.Utils.sourcelink.json
+D:\Proyectos\Entrevistas\Software-Colombia\SaaS Multi-Tenant\Backend\SaasMultiTenant.Utils\obj\Debug\net9.0\SaasMultiTenant.Utils.dll
+D:\Proyectos\Entrevistas\Software-Colombia\SaaS Multi-Tenant\Backend\SaasMultiTenant.Utils\obj\Debug\net9.0\refint\SaasMultiTenant.Utils.dll
+D:\Proyectos\Entrevistas\Software-Colombia\SaaS Multi-Tenant\Backend\SaasMultiTenant.Utils\obj\Debug\net9.0\SaasMultiTenant.Utils.pdb
+D:\Proyectos\Entrevistas\Software-Colombia\SaaS Multi-Tenant\Backend\SaasMultiTenant.Utils\obj\Debug\net9.0\ref\SaasMultiTenant.Utils.dll
+D:\Proyectos\Entrevistas\Software-Colombia\SaaS Multi-Tenant\Backend\SaasMultiTenant.Utils\bin\Debug\net9.0\SaasMultiTenant.Entity.dll
+D:\Proyectos\Entrevistas\Software-Colombia\SaaS Multi-Tenant\Backend\SaasMultiTenant.Utils\bin\Debug\net9.0\SaasMultiTenant.Entity.pdb
+D:\Proyectos\Entrevistas\Software-Colombia\SaaS Multi-Tenant\Backend\SaasMultiTenant.Utils\obj\Debug\net9.0\SaasMultiTenant.Utils.csproj.AssemblyReference.cache
+D:\Proyectos\Entrevistas\Software-Colombia\SaaS Multi-Tenant\Backend\SaasMultiTenant.Utils\obj\Debug\net9.0\SaasMult.5133A234.Up2Date
