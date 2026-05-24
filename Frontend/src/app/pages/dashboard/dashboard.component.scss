@@ -1,0 +1,14 @@
+::v-deep(.p-dataview-grid) {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -0.75rem;
+  margin-left: -0.75rem;
+}
+
+::v-deep(.p-dataview) {
+  .p-dataview-content {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+  }
+}

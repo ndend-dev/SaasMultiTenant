@@ -1,0 +1,114 @@
+<div class="login-wrapper bg-slate-50 text-slate-800 min-h-screen w-full flex justify-center items-center px-4">
+  
+  <div class="bg-white shadow-xl rounded-2xl border border-slate-200 p-8 w-full max-w-md">
+    
+    <div class="mb-6">
+      <h2 class="text-2xl font-bold text-slate-900 tracking-tight">Inicio de sesión</h2>
+      <p class="text-sm text-slate-500 mt-1">Bienvenido de nuevo.</p>
+    </div>
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="flex flex-column gap-4">
+      
+      <div class="flex flex-column gap-2">
+        <label for="email" class="font-semibold text-slate-700 text-sm">Correo Electrónico</label>
+        <input
+          pInputText
+          id="email"
+          type="email"
+          formControlName="email"
+          placeholder="Ingresa tu correo electrónico"
+          [fluid]="true"
+          class="w-full text-slate-900 bg-white border-slate-300 placeholder-slate-400 focus:border-teal-500"
+        />
+
+        @if (loginForm.get('email')?.touched && loginForm.get('email')?.invalid) {
+          <div class="p-error text-xs mt-1 text-red-500">
+            @if (loginForm.get('email')?.errors?.['required']) {
+              <small>Correo electrónico es requerido.</small>
+            }
+            @if (loginForm.get('email')?.errors?.['email']) {
+              <small>Por favor, ingrese un correo electrónico válido.</small>
+            }
+          </div>
+        }
+      </div>
+
+      <div class="flex flex-column gap-2">
+        <label for="password" class="font-semibold text-slate-700 text-sm">Contraseña</label>
+        <div class="w-full text-slate-900 [&_input]:bg-white [&_input]:text-slate-900 [&_input]:border-slate-300">
+          <p-password
+            id="password"
+            formControlName="password"
+            placeholder="Ingresa tu contraseña"
+            [toggleMask]="true"
+            [feedback]="false"
+            [fluid]="true"
+          ></p-password>
+        </div>
+
+        @if (loginForm.get('password')?.touched && loginForm.get('password')?.invalid) {
+          <div class="p-error text-xs mt-1 text-red-500">
+            @if (loginForm.get('password')?.errors?.['required']) {
+              <small>Contraseña es requerida.</small>
+            }
+            @if (loginForm.get('password')?.errors?.['minlength']) {
+              <small>La contraseña debe tener al menos 6 caracteres.</small>
+            }
+          </div>
+        }
+      </div>
+
+      <div class="mt-4">
+        <button
+          pButton
+          type="submit"
+          label="Iniciar sesión"
+          icon="pi pi-sign-in"
+          [disabled]="loginForm.invalid"
+          class="w-full bg-teal-600 border-none hover:bg-teal-700 text-white py-2.5 rounded-lg font-medium shadow-sm transition-colors"
+        ></button>
+      </div>
+    </form>
+  </div>
+
+  <p-dialog
+    header="Seleccione Espacio de trabajo"
+    [(visible)]="showWorkspaceDialog"
+    [visible]="showWorkspaceDialog()"
+    (visibleChange)="showWorkspaceDialog.set($event)"
+    [modal]="true"
+    [closable]="false"
+    [draggable]="false"
+    [resizable]="false"
+    [style]="{ width: '350px' }"
+    class="custom-light-dialog"
+  >
+    <p class="text-slate-600 mb-4 text-sm leading-relaxed">
+      Tienes acceso a múltiples espacios de trabajo. Por favor, elige uno para continuar:
+    </p>
+
+    <div class="flex flex-column gap-2">
+      @for (ws of workspaces; track ws.id) {
+        <button
+          pButton
+          [label]="ws.name"
+          icon="pi pi-briefcase"
+          class="p-button-outlined p-button-secondary w-full text-left justify-content-start text-slate-700 border-slate-300 hover:bg-slate-50"
+          (click)="onSelectWorkspace(ws.id)"
+        ></button>
+      }
+    </div>
+
+    <ng-template pTemplate="footer">
+      <button
+        pButton
+        label="Cancelar"
+        icon="pi pi-times"
+        class="p-button-text text-slate-500 hover:text-slate-700"
+        (click)="showWorkspaceDialog.set(false)"
+      ></button>
+    </ng-template>
+  </p-dialog>
+</div>
+
+<p-toast></p-toast>
