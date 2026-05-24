@@ -42,7 +42,10 @@ cd SaasMultiTenant
 
 ### 2. Levantar el entorno:
 ```bash
-docker-compose down -v && docker-compose up --build
+#Si es la primera vez o quieres forzar la reconstrucción completa:
+docker-compose down -v 
+#Luego, levanta el entorno con:
+docker-compose up --build
 
 ```
 
@@ -81,9 +84,9 @@ Confirmación: Sabrás que el proceso ha terminado cuando veas el siguiente mens
 
 Para interactuar con el sistema y realizar pruebas una vez desplegado el entorno, use las siguientes credenciales de acceso:
 
-- Correo electrónico: yeissonr@prueba.com
+- Correo electrónico: `yeissonr@prueba.com`
 
-- Contraseña: password123%
+- Contraseña: `password123%`
 
 ---
 
