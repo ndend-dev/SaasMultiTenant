@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  sqlserver:
+    container_name: sqlserver_db
+    build:
+      context: ./Database
+      dockerfile: Dockerfile
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=SaasMultiTenant123%
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqldata:/var/opt/mssql
+
+  backend:
+    image: backend-api
+    build:
+      context: ./Backend
+      dockerfile: Dockerfile
+    container_name: backend_api
+    ports:
+      - "5000:8080"
+    depends_on:
+      - sqlserver
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=SaasMultiTenant;User Id=sa;Password=SaasMultiTenant123%;Encrypt=False;TrustServerCertificate=True;
+
+
+  frontend:
+    image: frontend-app
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: frontend_angular
+    ports:
+      - "4200:80"
+    depends_on:
+      - backend
+
+volumes:
+  sqldata:

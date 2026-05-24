@@ -10,7 +10,7 @@
     </div>
 
     <div class="flex items-center gap-6">
-
+      <span class="font-medium text-slate-600">Rol: <strong class="text-slate-700">{{ authService.getTokenInfo()?.role }}</strong></span>
       <p-button
         icon="pi pi-power-off"
         pTooltip="Cerrar Sesión"
@@ -25,73 +25,177 @@
   <main class="max-w-7xl mx-auto px-6 py-8">
     <div class="flex justify-between items-center mb-8">
       <div>
-        <h1 class="text-2xl font-bold text-slate-900">Mis Proyectos</h1>
+        <h1 class="text-2xl font-bold text-slate-900">Proyectos</h1>
         <p class="text-sm text-slate-500">
-          Gestiona y organiza los entornos de este espacio de trabajo.
+          Gestiona y organiza los proyectos de este espacio de trabajo.
         </p>
       </div>
 
       @if (
         authService.getTokenInfo()?.role == 'Admin' || authService.getTokenInfo()?.role == 'Editor'
       ) {
-        <p-button label="Crear Proyecto" icon="pi pi-plus" variant="outlined" severity="success"  (click)="createProject()"></p-button>
+        <p-button
+          label="Crear Proyecto"
+          icon="pi pi-plus"
+          variant="outlined"
+          severity="success"
+          (click)="showCreateDialog()"
+        ></p-button>
       }
     </div>
 
     <div class="projects-container">
-      @if (loading()) {
-        <div class="flex flex-col items-center justify-center p-8 text-slate-500 gap-3">
-          <i class="pi pi-spin pi-spinner text-teal-500 text-3xl"></i>
-          <p class="font-medium animate-pulse">Cargando proyectos...</p>
+  @if (loading()) {
+    <div class="flex flex-col items-center justify-center p-8 text-slate-500 gap-3">
+      <i class="pi pi-spin pi-spinner text-teal-500 text-3xl"></i>
+      <p class="font-medium animate-pulse">Cargando proyectos...</p>
+    </div>
+  } @else {
+    <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+      @for (project of projects(); track project.id) {
+        <div
+          class="p-5 bg-white shadow-sm border border-slate-100 rounded-xl hover:shadow-md transition-shadow duration-200 flex flex-col justify-between gap-4"
+        >
+          <div>
+            <div class="flex items-start justify-between gap-3">
+              <div class="flex items-start gap-3">
+                <div class="p-2 bg-teal-50 text-teal-600 rounded-lg mt-0.5">
+                  <i class="pi pi-folder-open text-lg"></i>
+                </div>
+                <h3 class="font-bold text-slate-900 text-base leading-tight">
+                  {{ project.name }}
+                </h3>
+              </div>
+
+              @switch (project.status) {
+                @case ('Activo') {
+                  <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-green-50 text-green-700 border border-green-200">
+                    <span class="w-1.5 h-1.5 mr-1.5 rounded-full bg-green-500 animate-pulse"></span>
+                    {{ project.status }}
+                  </span>
+                }
+                @case ('Pendiente') {
+                  <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-blue-50 text-blue-700 border border-blue-200">
+                    <span class="w-1.5 h-1.5 mr-1.5 rounded-full bg-blue-500"></span>
+                    {{ project.status }}
+                  </span>
+                }
+                @case ('Completado') {
+                  <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-600 border border-slate-200">
+                    <span class="w-1.5 h-1.5 mr-1.5 rounded-full bg-slate-400"></span>
+                    {{ project.status }}
+                  </span>
+                }
+                @default {
+                  <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-gray-50 text-gray-600 border border-gray-200">
+                    {{ project.status || 'Sin Estado' }}
+                  </span>
+                }
+              }
+            </div>
+
+            <p class="text-sm text-slate-600 mt-3 flex items-start gap-2 pl-1">
+              <i class="pi pi-align-left text-slate-400 mt-1 text-xs"></i>
+              <span class="line-clamp-2">{{ project.description }}</span>
+            </p>
+          </div>
+
+          <div
+            class="pt-3 border-t border-slate-50 flex items-center justify-between text-xs text-slate-400 font-medium"
+          >
+            <div class="flex items-center gap-1.5">
+              <i class="pi pi-user text-slate-400"></i>
+              <span>Por: <strong class="text-slate-600">{{ project.createdByName }}</strong></span>
+            </div>
+          </div>
         </div>
-      } @else {
-        <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          @for (project of projects(); track project.id) {
-            <div
-              class="p-5 bg-white shadow-sm border border-slate-100 rounded-xl hover:shadow-md transition-shadow duration-200 flex flex-col justify-between gap-4"
-            >
-              <div>
-                <div class="flex items-start gap-3">
-                  <div class="p-2 bg-teal-50 text-teal-600 rounded-lg mt-0.5">
-                    <i class="pi pi-folder-open text-lg"></i>
-                  </div>
-                  <h3 class="font-bold text-slate-900 text-base leading-tight">
-                    {{ project.name }}
-                  </h3>
-                </div>
-
-                <p class="text-sm text-slate-600 mt-3 flex items-start gap-2 pl-1">
-                  <i class="pi pi-align-left text-slate-400 mt-1 text-xs"></i>
-                  <span class="line-clamp-2">{{ project.description }}</span>
-                </p>
-              </div>
-
-              <div
-                class="pt-3 border-t border-slate-50 flex items-center justify-between text-xs text-slate-400 font-medium"
-              >
-                <div class="flex items-center gap-1.5">
-                  <i class="pi pi-user text-slate-400"></i>
-                  <span
-                    >Por: <strong class="text-slate-600">{{ project.createdByName }}</strong></span
-                  >
-                </div>
-              </div>
-            </div>
-          } @empty {
-            <div
-              class="col-span-full flex flex-col items-center justify-center p-12 bg-slate-50 border-2 border-dashed border-slate-200 rounded-xl text-center"
-            >
-              <div class="p-4 bg-slate-100 text-slate-400 rounded-full mb-3">
-                <i class="pi pi-inbox text-4xl"></i>
-              </div>
-              <h4 class="text-slate-800 font-semibold text-base">Espacio vacío</h4>
-              <p class="text-sm text-slate-400 max-w-xs mt-1">
-                No hay proyectos activos en este Workspace actualmente.
-              </p>
-            </div>
-          }
+      } @empty {
+        <div
+          class="col-span-full flex flex-col items-center justify-center p-12 bg-slate-50 border-2 border-dashed border-slate-200 rounded-xl text-center"
+        >
+          <div class="p-4 bg-slate-100 text-slate-400 rounded-full mb-3">
+            <i class="pi pi-inbox text-4xl"></i>
+          </div>
+          <h4 class="text-slate-800 font-semibold text-base">Espacio vacío</h4>
+          <p class="text-sm text-slate-400 max-w-xs mt-1">
+            No hay proyectos activos en este Workspace actualmente.
+          </p>
         </div>
       }
     </div>
+  }
+</div>
   </main>
 </div>
+
+<p-dialog
+  header="Crear Nuevo Proyecto"
+  [(visible)]="displayCreateDialog"
+  [visible]="displayCreateDialog()"
+  (visibleChange)="displayCreateDialog.set($event)"
+  [modal]="true"
+  [draggable]="false"
+  [resizable]="false"
+  [style]="{ width: '450px' }"
+  class="custom-light-dialog"
+>
+  <p class="text-slate-500 text-sm mb-5">Ingresa los detalles para crear un nuevo proyecto.</p>
+
+  <form [formGroup]="projectForm" (ngSubmit)="createProject()" class="flex flex-col gap-4 w-full">
+    <div class="flex flex-col gap-1.5 w-full">
+      <label for="projectName" class="font-semibold text-slate-700 text-sm"
+        >Nombre del Proyecto</label
+      >
+      <input
+        pInputText
+        id="projectName"
+        formControlName="name"
+        placeholder="Ej: Rediseño Web v2"
+        [fluid]="true"
+        class="w-full"
+      />
+      @if (projectForm.get('name')?.touched && projectForm.get('name')?.invalid) {
+        <small class="text-red-500 text-xs mt-0.5"
+          >El nombre es requerido (mín. 3 caracteres).</small
+        >
+      }
+    </div>
+
+    <div class="flex flex-col gap-1.5 w-full">
+      <label for="description" class="font-semibold text-slate-700 text-sm">Descripción</label>
+      <textarea
+        pInputTextarea
+        id="description"
+        formControlName="description"
+        rows="4"
+        placeholder="Breve explicación del objetivo del proyecto..."
+        [autoResize]="true"
+        class="w-full"
+      ></textarea>
+      @if (projectForm.get('description')?.touched && projectForm.get('description')?.invalid) {
+        <small class="text-red-500 text-xs mt-0.5"
+          >La descripción es requerida (máx. 200 caracteres).</small
+        >
+      }
+    </div>
+
+    <div class="flex justify-end gap-3 mt-4 w-full">
+      <p-button
+        label="Cancelar"
+        variant="text"
+        severity="secondary"
+        (click)="displayCreateDialog.set(false)"
+      >
+      </p-button>
+      <p-button
+        label="Guardar Proyecto"
+        icon="pi pi-check"
+        type="submit"
+        [disabled]="projectForm.invalid"
+      >
+      </p-button>
+    </div>
+  </form>
+</p-dialog>
+
+<p-toast></p-toast>

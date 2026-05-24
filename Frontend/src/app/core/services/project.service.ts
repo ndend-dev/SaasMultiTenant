@@ -4,6 +4,7 @@ import { BehaviorSubject, catchError, map, Observable, of, tap } from 'rxjs';
 import { environment } from '../../../environments/environment';
 import { ProjectResponse } from '../models/projectResponse.model';
 import { isPlatformBrowser } from '@angular/common';
+import { ProjectRequest } from '../models/projectRequest.model';
 
 @Injectable({
   providedIn: 'root',
@@ -35,8 +36,16 @@ export class ProjectService {
       );
   }
 
-  createProject(): Observable<boolean> {
-    // Implement project creation logic here
-    return of(true);
+  createProject(projectRequest: ProjectRequest): Observable<boolean> {
+    const header = this.getAuthHeaders();
+    return this.http
+      .post(`${this.apiUrl}/${this.apiRoute}`, projectRequest, { headers: header })
+      .pipe(
+        tap(() => {
+            this.projectsSubject.next(this.getProjects(projectRequest.workspaceId) as unknown as ProjectResponse[]);
+        }),
+        map(() => true),
+        catchError(() => of(false)),
+      );
   }
 }
